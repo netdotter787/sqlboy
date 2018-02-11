@@ -25,6 +25,7 @@ int main(int argc, char *argv[]) {
 
   //Set the default size of the window
   gtk_window_set_default_size(GTK_WINDOW(window), 230, 150);
+  gtk_window_maximize(GTK_WINDOW(window));
 
   //Set the postion of the GTK window
   gtk_window_set_position(GTK_WINDOW(window), GTK_WIN_POS_CENTER);
