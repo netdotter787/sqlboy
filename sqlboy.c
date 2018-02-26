@@ -1,7 +1,7 @@
 #include <gtk/gtk.h>
 #include <mysql/my_global.h>
 #include <mysql/mysql.h>
-#include "test.c"
+#include "connection.h"
 
 int main(int argc, char *argv[]) {
 
@@ -58,8 +58,13 @@ int main(int argc, char *argv[]) {
   //Show the widget we created aka - window
   gtk_widget_show_all(window);
 
-  test();
-  printf("MySQL client version: %s\n", mysql_get_client_info());
+  addConnection();
+
+  secondConnection();
+
+  connection();
+  
+  // printf("MySQL client version: %s\n", mysql_get_client_info());
 
   gtk_main();
 
